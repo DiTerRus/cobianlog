@@ -19,6 +19,7 @@ namespace ConsoleApp3
             string filename2 = "log_copy";
             DateTime dt = new DateTime(1990, 1, 1);
             string filename = "";
+            
             //new DirectoryInfo(@"C:\1") - путь к папке с архивами
             FileSystemInfo[] fileSystemInfo = new DirectoryInfo(path).GetFileSystemInfos();
             foreach (FileSystemInfo fileSI in fileSystemInfo)
@@ -61,15 +62,38 @@ namespace ConsoleApp3
 
             //foreach (string s in logdata.Keys)
             // Console.WriteLine(s + ": " + logdata[s]);
+            double sizeinMB = -1;
+            switch (logdata["size_units"])
+            {
+                case "bytes":
+                    sizeinMB = Convert.ToDouble(logdata["size"]) / 1000000;
+                    break;
+                case "KB":
+                    sizeinMB = Convert.ToDouble(logdata["size"]) / 1000;
+                    break;
+                case "MB":
+                    sizeinMB = Convert.ToDouble(logdata["size"]);
+                    break;
+                case "GB":
+                    sizeinMB = Convert.ToDouble(logdata["size"]) * 1000;
+                    break;
+            }
 
-            string message = "The task " + logdata["name"] + " done with " + logdata["errors"] + " errors." + " " + logdata["size"] + " " + logdata["size_units"];
-         
+            
+            
+                
+
+            string message = "The task " + logdata["name"] + " done with " + logdata["errors"] + " errors.  Size in MB:" +" "+ sizeinMB;
+
             try
             {
                 using (EventLog eventLog = new EventLog("Application"))
                 {
-                    eventLog.Source = "Application";
-                    eventLog.WriteEntry(message, EventLogEntryType.Warning, 6789, 1);
+                    eventLog.Source = "Application";                //https://docs.microsoft.com/ru-ru/dotnet/api/system.diagnostics.eventlog.writeentry?view=dotnet-plat-ext-3.1
+                    if (Convert.ToInt32(logdata["errors"]) == 0)
+                        eventLog.WriteEntry(message, EventLogEntryType.Warning, 6789, 1);
+                    else
+                        eventLog.WriteEntry(message, EventLogEntryType.Error, 6789, 4);
                 }
             }
             catch
@@ -78,7 +102,7 @@ namespace ConsoleApp3
             }
             finally
             {
-                Console.WriteLine("Блок finally");
+                //Console.WriteLine("Блок finally");
                 Console.WriteLine(message);
             }
 

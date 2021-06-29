@@ -4,3 +4,9 @@ C:\Users\Terentev\source\repos\logreader\logreader\obj\Debug\logreader.csprojAss
 C:\Users\Terentev\source\repos\logreader\logreader\obj\Debug\logreader.csproj.CoreCompileInputs.cache
 C:\Users\Terentev\source\repos\logreader\logreader\obj\Debug\logreader.exe
 C:\Users\Terentev\source\repos\logreader\logreader\obj\Debug\logreader.pdb
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\bin\Debug\logreader.exe
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\bin\Debug\logreader.pdb
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\obj\Debug\logreader.csprojAssemblyReference.cache
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\obj\Debug\logreader.csproj.CoreCompileInputs.cache
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\obj\Debug\logreader.exe
+C:\Users\Terentev\source\repos\DiTerRus\cobianlog\logreader\logreader\obj\Debug\logreader.pdb
