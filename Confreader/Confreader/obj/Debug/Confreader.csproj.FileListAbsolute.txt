@@ -1,0 +1,6 @@
+C:\Users\Terentev\source\repos\Confreader\Confreader\obj\Debug\Confreader.csprojAssemblyReference.cache
+C:\Users\Terentev\source\repos\Confreader\Confreader\obj\Debug\Confreader.csproj.CoreCompileInputs.cache
+C:\Users\Terentev\source\repos\Confreader\Confreader\bin\Debug\Confreader.exe
+C:\Users\Terentev\source\repos\Confreader\Confreader\bin\Debug\Confreader.pdb
+C:\Users\Terentev\source\repos\Confreader\Confreader\obj\Debug\Confreader.exe
+C:\Users\Terentev\source\repos\Confreader\Confreader\obj\Debug\Confreader.pdb
